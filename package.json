@@ -63,11 +63,7 @@
   "browserslist": [
     "last 10 Chrome versions"
   ],
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
-  },
+  
   "author": "Wojciech Krysiak",
   "license": "MIT",
   "bugs": {

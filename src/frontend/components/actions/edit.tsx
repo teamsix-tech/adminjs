@@ -44,8 +44,6 @@ const Edit: FC<ActionProps> = (props) => {
 
   return (
     <Box
-      as="form"
-      onSubmit={submit}
       flex
       flexGrow={1}
       flexDirection="column"
@@ -74,7 +72,7 @@ const Edit: FC<ActionProps> = (props) => {
         ))}
       </DrawerContent>
       <DrawerFooter>
-        <Button variant="primary" size="lg" type="submit" data-testid="button-save" disabled={loading}>
+        <Button variant="primary" size="lg" type="submit"  onClick={submit} data-testid="button-save" disabled={loading}>
           {loading ? (<Icon icon="Fade" spin />) : null}
           {translateButton('save', resource.id)}
         </Button>

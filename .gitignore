@@ -5,7 +5,7 @@
 .cache
 # lib
 built
-types
+# types
 
 coverage
 
@@ -13,7 +13,7 @@ docker-compose.ovverride.yml
 
 node_modules
 
-src/frontend/assets/scripts
+# src/frontend/assets/scripts
 
 .adminjs
 
@@ -21,7 +21,7 @@ src/frontend/assets/scripts
 **/*/cypress/videos
 **/*/cypress/screenshots
 
-/packages/app/build
+# /packages/app/build
 
 .env
 firebase.env.json

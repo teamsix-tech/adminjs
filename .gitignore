@@ -23,6 +23,6 @@ node_modules
 
 # /packages/app/build
 
-.env
+# .env
 firebase.env.json
 yarn-error.log

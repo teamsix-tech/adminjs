@@ -15,4 +15,5 @@ export interface PageJSON {
      * Page icon
      */
     icon?: string;
+    isVisible?: boolean;
 }

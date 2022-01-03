@@ -13,8 +13,10 @@ type Props = {
 const h = new ViewHelpers()
 
 const SidebarPages: React.FC<Props> = (props) => {
-  const { pages } = props
+  const { pages: pagesOriginal } = props
 
+  const pages = pagesOriginal?.filter(page => page.isVisible)
+    
   const { translateLabel } = useTranslation()
   const location = useLocation()
   const history = useHistory()

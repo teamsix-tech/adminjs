@@ -10,12 +10,13 @@ type Props = {
   pages?: ReduxState['pages'];
 }
 
+
 const h = new ViewHelpers()
 
 const SidebarPages: React.FC<Props> = (props) => {
   const { pages: pagesOriginal } = props
 
-  const pages = pagesOriginal?.filter(page => page.isVisible)
+  const pages = pagesOriginal?.filter(page => page.isVisible || page.isVisible == undefined )
     
   const { translateLabel } = useTranslation()
   const location = useLocation()

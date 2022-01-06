@@ -373,6 +373,8 @@ export type AdminPage = {
    * Page icon
    */
   icon?: string;
+
+  isVisible?: boolean;
 }
 
 /**

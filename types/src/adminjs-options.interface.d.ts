@@ -353,6 +353,7 @@ export declare type AdminPage = {
      * Page icon
      */
     icon?: string;
+    isVisible?: boolean;
 };
 /**
  * Object describing map of regular pages in AdminJS

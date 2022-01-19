@@ -15,7 +15,7 @@ import { ACTIONS } from './backend/actions'
 
 import loginTemplate from './frontend/login-template'
 import { ListActionResponse } from './backend/actions/list/list-action'
-import { combineTranslations, Locale } from './locale/config'
+import { combineTranslations, Locale, LocaleList } from './locale/config'
 import en from './locale/en'
 import { TranslateFunctions, createFunctions } from './utils/translate-functions.factory'
 import { OverridableComponent } from './frontend/utils/overridable-component'
@@ -110,9 +110,10 @@ class AdminJS {
   }
 
   initI18n(): void {
+    console.log ('run initI18n')
     this.locale = {
-      translations: combineTranslations(en.translations, this.options.locale?.translations),
-      language: this.options.locale?.language || en.language,
+      translations: combineTranslations(en.translations, this.options.localeList?.['en'].translations),
+      language:  this.options.localeList?.['en'].language || en.language,
     }
     if (i18n.isInitialized) {
       i18n.addResourceBundle(this.locale.language, 'translation', this.locale.translations)

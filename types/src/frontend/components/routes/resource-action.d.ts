@@ -6,5 +6,5 @@ declare type PropsFromState = {
     resources: Array<ResourceJSON>;
 };
 declare type Props = PropsFromState & RouteComponentProps<ResourceActionParams>;
-declare const _default: import("react-redux").ConnectedComponent<React.FC<Props>, Pick<Props, "match" | "location" | "history" | "staticContext">>;
+declare const _default: import("react-redux").ConnectedComponent<React.FC<Props>, Pick<Props, "history" | "location" | "match" | "staticContext">>;
 export default _default;

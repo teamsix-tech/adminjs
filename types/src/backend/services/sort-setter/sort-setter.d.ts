@@ -18,7 +18,7 @@ declare type Sort = {
  */
 declare const sortSetter: {
     ({ direction, sortBy }: {
-        direction?: "desc" | "asc" | undefined;
+        direction?: "asc" | "desc" | undefined;
         sortBy?: string | undefined;
     } | undefined, firstPropertyName: string, resourceOptions?: ResourceOptions): Sort;
     DEFAULT_DIRECTION: string;

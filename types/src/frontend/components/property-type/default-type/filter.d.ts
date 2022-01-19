@@ -12,7 +12,7 @@ declare const _default: React.ForwardRefExoticComponent<Pick<import("../base-pro
     filter: any;
     onChange: import("../base-property-props").OnPropertyChange;
     record: undefined;
-} & ThemeProps<DefaultTheme> & React.RefAttributes<Filter>, "filter" | "ref" | "key" | "onChange" | "property" | "resource" | "record" | "where"> & {
+} & ThemeProps<DefaultTheme> & React.RefAttributes<Filter>, "property" | "filter" | "record" | "resource" | "ref" | "where" | "onChange" | "key"> & {
     theme?: DefaultTheme | undefined;
 }>;
 export default _default;

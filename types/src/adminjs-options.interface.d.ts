@@ -4,7 +4,7 @@ import BaseResource from './backend/adapters/resource/base-resource';
 import BaseDatabase from './backend/adapters/database/base-database';
 import { PageContext } from './backend/actions/action.interface';
 import { ResourceOptions } from './backend/decorators/resource/resource-options.interface';
-import { Locale } from './locale/config';
+import { Locale, LocaleList } from './locale/config';
 import { CurrentAdmin } from './current-admin.interface';
 /**
  * AdminJSOptions
@@ -230,6 +230,7 @@ export interface AdminJSOptions {
      * internationalization in AdminJS works.
      */
     locale?: Locale;
+    localeList?: LocaleList;
     /**
      * rollup bundle options;
      */

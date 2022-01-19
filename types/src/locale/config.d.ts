@@ -12,6 +12,15 @@ export declare type Locale = {
      */
     translations: Partial<LocaleTranslations>;
 };
+/**
+ * Locale object passed to {@link AdminJSOptions} and stored in the application
+ *
+ * @memberof AdminJSOptions
+ * @alias LocaleList
+ */
+export declare type LocaleList = {
+    [key: string]: Locale;
+};
 export declare type LocaleTranslationsBlock = {
     actions: {
         [key: string]: string;

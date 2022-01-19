@@ -4,7 +4,7 @@ import { EditPropertyProps } from '../base-property-props';
 declare type CombinedProps = EditPropertyProps & {
     theme: DefaultTheme;
 };
-declare const _default: React.ForwardRefExoticComponent<Pick<CombinedProps, "filter" | "onChange" | "property" | "resource" | "record" | "where"> & {
+declare const _default: React.ForwardRefExoticComponent<Pick<CombinedProps, "property" | "filter" | "record" | "resource" | "where" | "onChange"> & {
     theme?: DefaultTheme | undefined;
 }>;
 export default _default;

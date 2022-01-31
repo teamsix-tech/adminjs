@@ -54,8 +54,8 @@ export const ListAction: Action<ListActionResponse> = {
       )
     }
 
-    const filter = await new Filter(filters, resource).populate()
-
+    // const filter = await new Filter(filters, resource).populate()
+    const filter = await new Filter(filters, resource)
     const records = await resource.find(filter, {
       limit: perPage,
       offset: (page - 1) * perPage,

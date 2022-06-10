@@ -12,7 +12,7 @@ const Edit: React.FC<EditPropertyProps> = (props) => {
 
   return (
     <FormGroup error={!!error}>
-      {/* <PropertyLabel property={property} /> */}
+      <PropertyLabel property={property} />
       <DatePicker
         value={value}
         disabled={property.isDisabled}
@@ -21,6 +21,7 @@ const Edit: React.FC<EditPropertyProps> = (props) => {
         {...property.props}
         showYearDropdown
         dropdownMode="select"
+        
       />
       <FormMessage>{error && error.message}</FormMessage>
     </FormGroup>

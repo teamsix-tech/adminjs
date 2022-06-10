@@ -21,12 +21,12 @@ const Filter: React.FC<FilterPropertyProps> = (props) => {
     <React.Fragment>
       <FormGroup variant="filter">
         <Label>{property.label}</Label>
-        <Label>{`- ${translateProperty('from')}: `}</Label>
+        {/* <Label>{`- ${translateProperty('from')}: `}</Label> */}
         <DatePicker
           value={fromValue}
           onChange={(data: string): void => onChange(fromKey, data)}
           propertyType={property.type}
-            showYearDropdown={true}
+          showYearDropdown
           dropdownMode="select"
            showTimeInput={false}
         />
@@ -34,9 +34,9 @@ const Filter: React.FC<FilterPropertyProps> = (props) => {
         <DatePicker
           value={toValue}
           onChange={(data: string): void => onChange(toKey, data)}
-          showYearDropdown={true}
+          showYearDropdown
           dropdownMode="select"
-           showTimeInput={false}
+          showTimeInput={false}
           propertyType={property.type}
      
         />

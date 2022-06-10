@@ -18,6 +18,8 @@ const Edit: React.FC<EditPropertyProps> = (props) => {
         disabled={property.isDisabled}
         onChange={(data: string): void => onChange(property.path, data)}
         propertyType={property.type}
+         showYearDropdown={true}
+        dropdownMode="select"
         {...property.props}
       />
       <FormMessage>{error && error.message}</FormMessage>

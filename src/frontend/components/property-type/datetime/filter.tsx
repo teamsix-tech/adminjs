@@ -26,12 +26,19 @@ const Filter: React.FC<FilterPropertyProps> = (props) => {
           value={fromValue}
           onChange={(data: string): void => onChange(fromKey, data)}
           propertyType={property.type}
+            showYearDropdown={true}
+          dropdownMode="select"
+           showTimeInput={false}
         />
         <Label mt="default">{`- ${translateProperty('to')}: `}</Label>
         <DatePicker
           value={toValue}
           onChange={(data: string): void => onChange(toKey, data)}
+          showYearDropdown={true}
+          dropdownMode="select"
+           showTimeInput={false}
           propertyType={property.type}
+     
         />
       </FormGroup>
     </React.Fragment>

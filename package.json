@@ -12,8 +12,9 @@
     "lint": "eslint './spec/**/*' './src/**/*' './cy/**/*' './*'",
     "cover": "NODE_ENV=test nyc --reporter=lcov --reporter=text-lcov npm test",
     "codecov": "NODE_ENV=test nyc --reporter=text-lcov npm test | codecov --pipe",
-    "bundle": "node bin/watch-dev.js",
-    "bundle:globals": "node bin/bundle-globals.js",
+    "bundle": "env-cmd node bin/watch-dev.js",
+    "bundle:globals": "env-cmd node bin/bundle-globals.js",
+    "bundle:prod": "env-cmd yarn bundle:globals && env-cmd yarn bundle && env-cmd yarn  build",
     "cspell": "cspell src/**/*.ts src/**/*.js src/**/*.tsx src/**/*.jsx",
     "check:all": "yarn types && yarn cspell && yarn lint && yarn test && ONCE=true yarn bundle && ONCE=true NODE_ENV=production yarn bundle",
     "dev": "npm-run-all --parallel \"build --watch\" \"bundle\" \"types --watch\"",
@@ -63,7 +64,6 @@
   "browserslist": [
     "last 10 Chrome versions"
   ],
-  
   "author": "Wojciech Krysiak",
   "license": "MIT",
   "bugs": {
@@ -90,6 +90,7 @@
     "axios": "^0.24.0",
     "babel-plugin-styled-components": "^1.11.1",
     "commander": "^5.1.0",
+    "env-cmd": "^10.1.0",
     "flat": "^4.1.0",
     "i18next": "19.8.7",
     "lodash": "^4.17.21",

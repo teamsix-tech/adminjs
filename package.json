@@ -71,7 +71,7 @@
   },
   "homepage": "https://github.com/SoftwareBrothers/adminjs#readme",
   "dependencies": {
-    "@adminjs/design-system": "git+https://github.com/Diego1Carmo/adminjs-design-system.git",
+    "@adminjs/design-system": "^2.0.0",
     "@babel/core": "^7.10.2",
     "@babel/parser": "^7.10.2",
     "@babel/plugin-transform-runtime": "^7.10.1",

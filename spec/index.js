@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 
 /* eslint-disable func-names */
-require('@babel/polyfill')
+// require('@babel/polyfill')
 require('@babel/register')({
   presets: [
     require.resolve('@babel/preset-react'),
